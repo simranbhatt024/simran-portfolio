@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simran Bhatt Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
     .skill-box, .project-box, .view-work-btn {
       padding: 0.5rem 1rem;
-      text-align: centre;
+      text-align: center;
       font-size: 0.875rem;
       font-weight: 600;
       border-radius: 0.5rem;
@@ -25,7 +25,7 @@
     }
     .skill-box:hover, .project-box:hover, .view-work-btn:hover {
       background-color: rgb(37 99 235);
-      colour: white;
+      color: white;
     }
     .dark .skill-box:hover, .dark .project-box:hover, .dark .view-work-btn:hover {
       background-color: rgb(59 130 246);
@@ -35,11 +35,10 @@
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
   <div class="min-h-screen flex flex-col items-center justify-center p-8">
 
-    <!-- Theme Toggle -->
+    <!-- Toggle Theme Button -->
     <button id="toggleTheme" class="fixed top-4 right-4 p-2 bg-gray-200 dark:bg-gray-700 rounded-full shadow-md hover:scale-110 transition-transform">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 4.05l-.71.71m16.97 10.59l-.71.71M3.34 19.66l-.71.71M21 12h1M2 12H1" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 4.05l-.71.71m16.97 10.59l-.71.71M3.34 19.66l-.71.71M21 12h1M2 12H1" />
       </svg>
     </button>
 
@@ -47,98 +46,114 @@
     <section class="text-center" data-aos="fade-up">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Simran Bhatt</h1>
       <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6">Frontend Developer | Data Analyst</p>
-      <a href="#projects" class="view-work-btn inline-block">View My Work</a>
+      <a href="#contentStart" class="view-work-btn inline-block">View My Work</a>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="mt-20 w-full max-w-5xl" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Experience</h2>
-      <ul class="space-y-6 px-4">
-        <li><strong>DRDO</strong> – Project Intern (June 2025 - July 2025)</li>
-        <li><strong>Artfair Innovation</strong> – Frontend Developer (Dec 2024 - Feb 2025)</li>
-        <li><strong>TerraTern</strong> – Frontend Intern (May 2024 - June 2024)</li>
-        <li><strong>Octanet</strong> – Frontend Intern (June 2024 - July 2024)</li>
-      </ul>
-    </section>
+    <!-- Contact Me Button -->
+    <button onclick="toggleContactPopup()" class="mt-6 view-work-btn">Contact Me</button>
 
-    <!-- Skills -->
-    <section id="skills" class="mt-20 w-full max-w-5xl" data-aos="zoom-in">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4">
-        <div class="skill-box">HTML</div>
-        <div class="skill-box">CSS</div>
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">Tailwind CSS</div>
-        <div class="skill-box">React JS</div>
-        <div class="skill-box">Python</div>
-        <div class="skill-box">C/C++</div>
-        <div class="skill-box">SQL</div>
-        <div class="skill-box">DSA</div>
-        <div class="skill-box">Power BI</div>
-        <div class="skill-box">NumPy</div>
-        <div class="skill-box">Pandas</div>
-        <div class="skill-box">GitHub</div>
-        <div class="skill-box">WordPress</div>
-        <div class="skill-box">Google Sheets</div>
-        <div class="skill-box">Excel</div>
+    <!-- Contact Popup Modal (Centered) -->
+    <div id="contactPopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-sm w-full mx-auto">
+        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+        <p class="mb-2 text-gray-800 dark:text-gray-200">📧 simranbhatt2411@gmail.com</p>
+        <p class="mb-4">
+          🔗 <a href="https://www.linkedin.com/in/simran-bhatt-a7b5b6239/" target="_blank" class="text-blue-500 underline">LinkedIn Profile</a>
+        </p>
+        <button onclick="toggleContactPopup()" class="view-work-btn">Close</button>
       </div>
-    </section>
+    </div>
 
-    <!-- Projects -->
-    <section id="projects" class="mt-20 w-full max-w-5xl" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4">
-        <a href="https://simranbhatt024.github.io/y-axiz--s/" target="_blank" class="project-box">Job Portal</a>
-        <a href="https://safeschools.org.in/" target="_blank" class="project-box">School Website</a>
-        <a href="https://aigiglab.com/" target="_blank" class="project-box">AI Automation</a>
-        <a href="https://dianaoflondon.store/" target="_blank" class="project-box">WooCommerce Site</a>
-        <a href="https://simranbhatt024.github.io/simran-portfolio/" target="_blank" class="project-box">This Portfolio</a>
-        <a href="https://simranbhatt024.github.io/Smart-To-Do-Planner/" target="_blank" class="project-box">Smart-To-Do-Planner</a>
+    <!-- Start of Work Content -->
+    <div id="contentStart" class="w-full mt-20">
+      <!-- Experience Section -->
+      <section class="w-full max-w-5xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Experience</h2>
+        <ul class="space-y-6 px-4">
+          <li><strong>DRDO</strong> – Project Intern (June 2025 - July 2025)</li>
+          <li><strong>Artfair Innovation</strong> – Frontend Developer (Dec 2024 - Feb 2025)</li>
+          <li><strong>TerraTern</strong> – Frontend Intern (May 2024 - June 2024)</li>
+          <li><strong>Octanet</strong> – Frontend Intern (June 2024 - July 2024)</li>
+        </ul>
+      </section>
 
-      </div>
-    </section>
+      <!-- Skills Section -->
+      <section class="mt-20 w-full max-w-5xl mx-auto" data-aos="zoom-in">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4">
+          <div class="skill-box">HTML</div>
+          <div class="skill-box">CSS</div>
+          <div class="skill-box">JavaScript</div>
+          <div class="skill-box">Tailwind CSS</div>
+          <div class="skill-box">React JS</div>
+          <div class="skill-box">Python</div>
+          <div class="skill-box">C/C++</div>
+          <div class="skill-box">SQL</div>
+          <div class="skill-box">DSA</div>
+          <div class="skill-box">Power BI</div>
+          <div class="skill-box">NumPy</div>
+          <div class="skill-box">Pandas</div>
+          <div class="skill-box">GitHub</div>
+          <div class="skill-box">WordPress</div>
+          <div class="skill-box">Google Sheets</div>
+          <div class="skill-box">Excel</div>
+        </div>
+      </section>
 
-    <!-- Power BI Dashboard -->
-    <section id="dashboard" class="mt-20 w-full max-w-5xl text-center" data-aos="zoom-in-up">
-      <h2 class="text-3xl font-semibold mb-6">Analytics Dashboard</h2>
-      <div class="w-full">
-        <iframe 
-          width="100%" 
-          height="500" 
-          src="https://app.powerbi.com/view?r=YOUR_EMBED_LINK_HERE" 
-          frameborder="0" 
-          allowFullScreen="true" 
-          class="rounded-xl shadow-lg"
-        ></iframe>
-      </div>
-    </section>
+      <!-- Projects Section -->
+      <section class="mt-20 w-full max-w-5xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-4">
+          <a href="https://simranbhatt024.github.io/y-axiz--s/" target="_blank" class="project-box">Job Portal</a>
+          <a href="https://safeschools.org.in/" target="_blank" class="project-box">School Website</a>
+          <a href="https://aigiglab.com/" target="_blank" class="project-box">AI Automation</a>
+          <a href="https://dianaoflondon.store/" target="_blank" class="project-box">WooCommerce Site</a>
+          <a href="https://simranbhatt024.github.io/simran-portfolio/" target="_blank" class="project-box">This Portfolio</a>
+          <a href="https://simranbhatt024.github.io/Smart-To-Do-Planner/" target="_blank" class="project-box">Smart-To-Do-Planner</a>
+        </div>
+      </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mt-20 w-full max-w-2xl text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
-      <form action="https://formspree.io/f/your-email@example.com" method="POST" class="space-y-4 px-4">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded-md border" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded-md border" />
-        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-2 rounded-md border"></textarea>
-        <button type="submit" class="view-work-btn">Send Message</button>
-      </form>
-    </section>
+      <!-- Power BI Dashboard Section -->
+      <section class="mt-20 w-full max-w-5xl text-center mx-auto" data-aos="zoom-in-up">
+        <h2 class="text-3xl font-semibold mb-6">Analytics Dashboard</h2>
+        <div class="w-full px-4">
+          <iframe 
+            title="Simran BI Dashboard" 
+            width="100%" 
+            height="500" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiXYZ1234567890&embedImagePlaceholder=true" 
+            frameborder="0" 
+            allowFullScreen="true" 
+            class="rounded-lg shadow-lg"
+          ></iframe>
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiXYZ1234567890&embedImagePlaceholder=true" target="_blank" class="mt-4 inline-block view-work-btn">
+            View Full Dashboard
+          </a>
+        </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="mt-20 text-sm text-gray-500 dark:text-gray-400 text-center">
-      © 2025 Simran Bhatt. All rights reserved.
-    </footer>
+      <!-- Footer -->
+      <footer class="mt-20 text-sm text-gray-500 dark:text-gray-400 text-center">
+        © 2025 Simran Bhatt. All rights reserved.
+      </footer>
+    </div>
+
   </div>
 
-  <!-- Scripts -->
+  <!-- JS Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: false });
     const toggleBtn = document.getElementById('toggleTheme');
     toggleBtn.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     });
+
+    function toggleContactPopup() {
+      const popup = document.getElementById('contactPopup');
+      popup.classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>
